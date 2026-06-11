@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Block Blast Master</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+    <div id="start-screen" class="screen">
+        <div class="screen-content animate-pop">
+            <h1 class="game-title">BLOCK<br><span class="highlight">BLAST</span></h1>
+            <div class="badge">NIVEL EXPERTO</div>
+            <p class="welcome-text">Desafía tu mente, destruye combos de neón y domina la tabla de posiciones.</p>
+            <button id="btn-start" class="pulse-animation">¡ENTRAR AL JUEGO!</button>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="game-navbar">
+            <div class="score-box">
+                <span class="label">SCORE</span>
+                <div id="score" class="number">0</div>
+            </div>
+            <button id="btn-settings-toggle" class="icon-button">⚙️</button>
+        </div>
+
+        <div id="settings-panel" class="settings-panel hidden">
+            <h3>Configuración</h3>
+            <div class="control-row">
+                <span>Música 🎵</span>
+                <button id="btn-toggle-music" class="toggle-active">SÍ</button>
+            </div>
+            <div class="control-row">
+                <span>Efectos 🔊</span>
+                <button id="btn-toggle-sfx" class="toggle-active">SÍ</button>
+            </div>
+            <div class="control-row">
+                <span>Vibración 📳</span>
+                <button id="btn-toggle-vibe" class="toggle-active">SÍ</button>
+            </div>
+        </div>
+
+        <div class="alert-zone">
+            <div id="combo-alert" class="combo-alert"></div>
+        </div>
+
+        <div id="board" class="board"></div>
+        <div id="pieces-container" class="pieces-container"></div>
+    </div>
+
+    <div id="particle-container"></div>
+    <div id="drag-ghost" class="drag-ghost"></div>
+
+    <div id="game-over" class="screen hidden">
+        <div class="screen-content">
+            <h2 class="game-over-title">¡TABLERO LLENO!</h2>
+            <p>Tu puntuación final ha sido registrada con éxito.</p>
+            <div class="final-score">TOTAL: <span id="final-score-val">0</span> PTS</div>
+            <button id="btn-restart">VOLVER A INTENTAR</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
